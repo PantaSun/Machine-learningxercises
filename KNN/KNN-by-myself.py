@@ -83,7 +83,7 @@ class KNN:
 
     def run(self):
         """主函数"""
-        self.load_data_sets()
+        self.load_data_sets("irisdata.txt", 1)
         for test in self.test_set:
             neighbors = self.get_neighbors(test)
             result = self.get_response(neighbors)
@@ -97,4 +97,4 @@ knn = KNN()
 knn.load_data_sets("irisdata.txt", 1)
 knn.predict([5.7,2.8,4.5,1.3])
 knn.predict([6.9,3.2,5.7,2.3])
-
+knn.run()
